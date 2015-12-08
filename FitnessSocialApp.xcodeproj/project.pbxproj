@@ -14,6 +14,8 @@
 		D4D1F3201C1628A300FA82E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D1F31E1C1628A300FA82E6 /* Main.storyboard */; };
 		D4D1F3221C1628A300FA82E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D1F3211C1628A300FA82E6 /* Assets.xcassets */; };
 		D4D1F3251C1628A300FA82E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D1F3231C1628A300FA82E6 /* LaunchScreen.storyboard */; };
+		D4D1F3321C166C4600FA82E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1F3311C166C4600FA82E6 /* LoginViewController.swift */; };
+		D4D1F3341C166C5F00FA82E6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1F3331C166C5F00FA82E6 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D4D1F3211C1628A300FA82E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4D1F3241C1628A300FA82E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4D1F3261C1628A300FA82E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D1F3311C166C4600FA82E6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D4D1F3331C166C5F00FA82E6 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,50 @@
 		D4D1F3151C1628A200FA82E6 /* FitnessSocialApp */ = {
 			isa = PBXGroup;
 			children = (
-				D4D1F3161C1628A300FA82E6 /* AppDelegate.swift */,
-				D4D1F3181C1628A300FA82E6 /* RootViewController.swift */,
-				D4D1F31A1C1628A300FA82E6 /* DataViewController.swift */,
-				D4D1F31C1C1628A300FA82E6 /* ModelController.swift */,
-				D4D1F31E1C1628A300FA82E6 /* Main.storyboard */,
-				D4D1F3211C1628A300FA82E6 /* Assets.xcassets */,
-				D4D1F3231C1628A300FA82E6 /* LaunchScreen.storyboard */,
-				D4D1F3261C1628A300FA82E6 /* Info.plist */,
+				D4D1F3301C166BE000FA82E6 /* ui */,
+				D4D1F32F1C166BD400FA82E6 /* controllers */,
+				D4D1F32E1C166BCC00FA82E6 /* models */,
+				D4D1F32D1C162E0400FA82E6 /* Supporting */,
 			);
 			path = FitnessSocialApp;
+			sourceTree = "<group>";
+		};
+		D4D1F32D1C162E0400FA82E6 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				D4D1F3161C1628A300FA82E6 /* AppDelegate.swift */,
+				D4D1F3211C1628A300FA82E6 /* Assets.xcassets */,
+				D4D1F3261C1628A300FA82E6 /* Info.plist */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		D4D1F32E1C166BCC00FA82E6 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D4D1F31C1C1628A300FA82E6 /* ModelController.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		D4D1F32F1C166BD400FA82E6 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4D1F3181C1628A300FA82E6 /* RootViewController.swift */,
+				D4D1F31A1C1628A300FA82E6 /* DataViewController.swift */,
+				D4D1F3311C166C4600FA82E6 /* LoginViewController.swift */,
+				D4D1F3331C166C5F00FA82E6 /* RegisterViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		D4D1F3301C166BE000FA82E6 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				D4D1F3231C1628A300FA82E6 /* LaunchScreen.storyboard */,
+				D4D1F31E1C1628A300FA82E6 /* Main.storyboard */,
+			);
+			name = ui;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +183,8 @@
 				D4D1F3191C1628A300FA82E6 /* RootViewController.swift in Sources */,
 				D4D1F31D1C1628A300FA82E6 /* ModelController.swift in Sources */,
 				D4D1F31B1C1628A300FA82E6 /* DataViewController.swift in Sources */,
+				D4D1F3341C166C5F00FA82E6 /* RegisterViewController.swift in Sources */,
+				D4D1F3321C166C4600FA82E6 /* LoginViewController.swift in Sources */,
 				D4D1F3171C1628A300FA82E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

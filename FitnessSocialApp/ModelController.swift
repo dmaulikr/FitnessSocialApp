@@ -20,32 +20,33 @@ import UIKit
 
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
-    var pageData: [String] = []
-
+    var pagetitle: [String] = ["It's your gym", "Find a buddy", "Inspire. Get inspired", "Share. Learn"]
+    var pageBackgroundColor: [UIColor] = [UIColor.blackColor(),
+                                    UIColor.blueColor(),
+                                    UIColor.brownColor(),
+                                    UIColor.darkGrayColor()]
 
     override init() {
         super.init()
-        // Create the data model.
-        let dateFormatter = NSDateFormatter()
-        pageData = dateFormatter.monthSymbols
     }
 
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> DataViewController? {
         // Return the data view controller for the given index.
-        if (self.pageData.count == 0) || (index >= self.pageData.count) {
+        if (pagetitle.count == 0) || (index >= pagetitle.count) {
             return nil
         }
 
         // Create a new view controller and pass suitable data.
         let dataViewController = storyboard.instantiateViewControllerWithIdentifier("DataViewController") as! DataViewController
-        dataViewController.dataObject = self.pageData[index]
+        dataViewController.titleObject = self.pagetitle[index]
+        dataViewController.backgroundObjectColor = self.pageBackgroundColor[index]
         return dataViewController
     }
 
     func indexOfViewController(viewController: DataViewController) -> Int {
         // Return the index of the given data view controller.
         // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-        return pageData.indexOf(viewController.dataObject) ?? NSNotFound
+        return pagetitle.indexOf(viewController.titleObject) ?? NSNotFound
     }
 
     // MARK: - Page View Controller Data Source
@@ -67,7 +68,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         }
         
         index++
-        if index == self.pageData.count {
+        if index == self.pagetitle.count {
             return nil
         }
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)

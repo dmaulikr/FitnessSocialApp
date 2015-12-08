@@ -10,9 +10,10 @@ import UIKit
 
 class DataViewController: UIViewController {
 
-    @IBOutlet weak var dataLabel: UILabel!
-    var dataObject: String = ""
-
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    var titleObject: String = ""
+    var backgroundObjectColor: UIColor = UIColor.cyanColor()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +27,29 @@ class DataViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.dataLabel!.text = dataObject
+        titleLabel.text = titleObject
+        backgroundImageView.backgroundColor = backgroundObjectColor
     }
 
-
+    @IBAction func loginUser(sender: UIButton) {
+        print("Login please!")
+        performSegueWithIdentifier("loginUserSegue", sender: sender) 
+    }
+    
+    @IBAction func registerNewUser(sender: UIButton) {
+        print("Register please!")
+        performSegueWithIdentifier("registerUserSegue", sender: sender)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "loginUserSegue" {
+            if let loginViewController = segue.destinationViewController as? LoginViewController{
+                loginViewController.titleLabelString = "Login please!"
+            }
+        }
+        
+        if segue.identifier == "registerUserSegue" {
+        }
+    }
 }
 
